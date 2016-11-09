@@ -1,0 +1,34 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to the #{title}
+	form#bulk-import.container.form
+		#historic
+			h3 1. Import your historic data
+			.col-sm-6
+				.form-group
+					label(for="ChartMogul API Token") ChartMogul API Token
+					input.form-control#cm-token(name="ChartMogul API Token" alt="ChartMogul API Token" placeholder="d26280be63d69451812819ao0" title='ChartMogul API Token')
+				.form-group
+					label(for="ChartMogul Secret Key") ChartMogul Secret Key
+					input.form-control#cm-key(name="ChartMogul Secret Key" alt="ChartMogul Secret Key" placeholder="b3ehbssdnkak2001" title='ChartMogul Secret Key')
+			.col-sm-6
+				.form-group
+					label(for="Intercom account id") Intercom account id
+					input.form-control#int-token(name="Intercom account id" alt="Chargebee Subdomain" placeholder="gloe2s" title='Intercom account id')
+				.form-group
+					label(for="Intercom API Key") Intercom API Key (read-only)
+					input.form-control#int-key(name="Intercom API Key" alt="Intercom API Key" placeholder="VlLxcmwoewets5TbbtKmMxawePvEEp:" title='Intercom API Key')
+			.col-sm-7
+				button.btn.btn-default#import(name="Import data" value="Import data") Import data
+				#error.help-block
+			script(type='text/javascript').
+				document.getElementById('import').addEventListener("click", importData);
+		#webhook
+			h3 2. Set up a webhook to keep your Intercom and ChartMogul account in sync
+			p Copy and paste your webhook URL (enabling all user, contact and lead notifications) at <a id="subdomain"></a>.
+			label(for="Your webhook URL") Your webhook URL:
+			p#url
+		p#status
+		

@@ -1,0 +1,24 @@
+{
+  "name": "chartmogul-intercom",
+  "author": "Bill Franklin <bill@chartmogul.com>",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node --max-executable-size=192 --max-old-space-size=256 --max-semi-space-size=2 ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "chartmogul-node": "^0.1.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "intercom-client": "^2.8.3",
+    "jade": "~1.11.0",
+    "moment": "^2.15.1",
+    "mongodb": "^2.2.10",
+    "morgan": "~1.7.0",
+    "q": "^1.4.1",
+    "serve-favicon": "~2.3.0",
+    "unirest": "^0.5.1"
+  }
+}
